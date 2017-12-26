@@ -114,7 +114,7 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
     // Public Functions //
     ///////////////////////////////////////////////////////////////
     
-    public func inicialize(numberOfColumns:Int) {
+    public func inicialize(numberOfColumns:Int,optionalPadding padding:CGFloat=0) {
         self.delegate = self
         self.dataSource = self
         longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture(gesture:)))
@@ -135,7 +135,7 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
             } else {
                 rect = updateFrameOfCollection(orientation: .Vertical)
             }
-            positionInfo = PositionInfoManager(numberOfColumns: numberOfColumns, frame: rect)
+            positionInfo = PositionInfoManager(numberOfColumns: numberOfColumns, frame: rect, padding: padding)
             positionInfo.updateFrame(frame:rect)
             prepareCollection()
             

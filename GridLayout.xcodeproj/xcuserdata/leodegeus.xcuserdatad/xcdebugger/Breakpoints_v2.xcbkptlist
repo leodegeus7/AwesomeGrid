@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GridLayout/Core/GridView.swift"
-            timestampString = "535998023.9267"
+            filePath = "GridLayout/Core/PositionInfo.swift"
+            timestampString = "536012060.447867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "inicialize(numberOfColumns:)"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "getElementsInfo()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,29 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GridLayout/Core/GridView.swift"
-            timestampString = "535998023.926775"
+            filePath = "DemoApp/ViewController.swift"
+            timestampString = "536012060.448242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "tapToResize"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GridLayout/Core/GridView.swift"
-            timestampString = "535998023.926841"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "tapToResize"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "colors"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>

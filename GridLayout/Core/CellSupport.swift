@@ -14,10 +14,10 @@ public class CellSupport: NSObject {
     public var view:UIView!
     var index:Int!
     
-    public init(gridView:GridView,x:Int,y:Int,squaresOfHeight:Int,squaresOfWidth:Int) {
+    public init(gridView:GridView,row:Int,column:Int,squaresOfHeight:Int,squaresOfWidth:Int) {
         super.init()
         let positionInfoManager = gridView.positionInfo
-        element = Element(row: x, column: y, squaresOfWidth: squaresOfWidth, squaresOfHeight: squaresOfHeight)
+        element = Element(row: row, column: column, squaresOfWidth: squaresOfWidth, squaresOfHeight: squaresOfHeight)
         view = UIView(frame: CGRect(x: 0, y: 0, width: (positionInfoManager?.columnSize)!*CGFloat(squaresOfWidth), height: (positionInfoManager?.columnSize)!*CGFloat(squaresOfHeight)))
         index = positionInfoManager?.getIndexForCreateCell()
         

@@ -17,7 +17,7 @@ class GridLayout: UICollectionViewLayout {
     weak var delegate: GridInternalLayoutDelegate!
     fileprivate var numberOfColumns = 4
     fileprivate var numberOfRows = 0
-    fileprivate var cellPadding: CGFloat = 0
+    fileprivate var cellPadding: CGFloat = 0.0
     fileprivate var cache = [UICollectionViewLayoutAttributes]()
     fileprivate var contentHeight: CGFloat = 0
     

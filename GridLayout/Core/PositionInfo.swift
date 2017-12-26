@@ -16,9 +16,11 @@ class PositionInfoManager: NSObject {
     var columnSize:CGFloat = 0.0
     var indexForCells = 0
     
+    
     public var properlySeatedElements = [Element]()
     
     internal var frame = CGRect()
+    internal var padding = CGFloat()
     internal var matrix = [[TypeObject]]()
 
     internal enum TypeObject:Int {
@@ -34,24 +36,30 @@ class PositionInfoManager: NSObject {
     
     public func updateFrame(frame:CGRect) {
         self.frame = frame
-        columnSize = frame.width/CGFloat(numberOfColumns)
+        columnSize = getColumnSize()
     }
     
     public func getNumberOfItens() -> Int {
         return properlySeatedElements.count
     }
     
-    required init(numberOfColumns:Int,frame:CGRect) {
+    required init(numberOfColumns:Int,frame:CGRect,padding:CGFloat) {
         super.init()
         self.numberOfColumns = numberOfColumns
         self.frame = frame
+        self.padding = padding
         self.matrix = createZeroMatrix()
+    }
+    
+    internal func getColumnSize() -> CGFloat {
+        return CGFloat(Float(frame.width) - Float((numberOfColumns-1))*Float(padding))/CGFloat(numberOfColumns)
     }
     
     internal func createZeroMatrix() -> [[TypeObject]] {
         var matrix = [[TypeObject]]()
         let totalHeight = frame.height
-        columnSize = frame.width/CGFloat(numberOfColumns)
+        
+        columnSize = getColumnSize()
         numberOfRows = Int(totalHeight/columnSize)
         let columns = numberOfColumns
         let rows = numberOfRows
@@ -77,11 +85,20 @@ class PositionInfoManager: NSObject {
             var x:CGFloat = 0.0
             var y:CGFloat = 0.0
             
-            height = CGFloat(element.squaresOfHeight) * columnSize
-            width = CGFloat(element.squaresOfWidth) * columnSize
+            if element.squaresOfHeight == 1 {
+                height = CGFloat(element.squaresOfHeight) * columnSize
+            } else {
+                height = CGFloat(element.squaresOfHeight) * columnSize + CGFloat(element.squaresOfHeight - 1)*padding
+            }
             
-            x = CGFloat(element.column) * columnSize
-            y = CGFloat(element.row) * columnSize
+            if element.squaresOfWidth == 1 {
+                width = CGFloat(element.squaresOfWidth) * columnSize
+            } else {
+                width = CGFloat(element.squaresOfWidth) * columnSize + CGFloat(element.squaresOfWidth - 1)*padding
+            }
+            
+            x = CGFloat(element.column) * columnSize + padding*CGFloat(element.column)
+            y = CGFloat(element.row) * columnSize + padding*CGFloat(element.row)
             
             let rect = CGRect(x: x, y: y, width: width, height: height)
             resultArray.append(rect)

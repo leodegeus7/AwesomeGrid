@@ -9,7 +9,9 @@
 import XCTest
 
 class DemoAppUITests: XCTestCase {
-        
+    
+    let app = XCUIApplication()
+    
     override func setUp() {
         super.setUp()
         
@@ -33,32 +35,32 @@ class DemoAppUITests: XCTestCase {
         XCTAssertTrue(app.collectionViews.cells.count > 0)
     }
     
-    func test002IfWith2TapsElementWillGetBigger() {
-        
-        let firstChild = app.collectionViews.children(matching:.any).element(boundBy: 0)
-        let frame = firstChild.frame
-        if firstChild.exists {
-            firstChild.tap(withNumberOfTaps: 2, numberOfTouches: 1)
-            let frame2 = firstChild.frame
-            XCTAssertTrue(frame2.width > frame.width)
-            XCTAssertFalse(frame2.width < frame.width)
-        }
-        
-    }
-    
-    func test003IfMoveToOtherCollectionElementItWillBackToYourLastSpace() {
-        XCUIApplication().launch()
-        let firstChild = app.collectionViews.children(matching:.any).element(boundBy: 0)
-        let frame = firstChild.frame
-        if firstChild.exists {
-            let secondChild = app.collectionViews.children(matching:.any).element(boundBy: 1)
-            firstChild.press(forDuration: 1, thenDragTo: secondChild)
-            sleep(2)
-            let frame2 = firstChild.frame
-            XCTAssertTrue(frame == frame2)
-            
-        }
-        
-    }
+//    func test002IfWith2TapsElementWillGetBigger() {
+//
+//        let firstChild = app.collectionViews.children(matching:.any).element(boundBy: 0)
+//        let frame = firstChild.frame
+//        if firstChild.exists {
+//            firstChild.tap(withNumberOfTaps: 2, numberOfTouches: 1)
+//            let frame2 = firstChild.frame
+//            XCTAssertTrue(frame2.width > frame.width)
+//            XCTAssertFalse(frame2.width < frame.width)
+//        }
+//
+//    }
+//
+//    func test003IfMoveToOtherCollectionElementItWillBackToYourLastSpace() {
+//        XCUIApplication().launch()
+//        let firstChild = app.collectionViews.children(matching:.any).element(boundBy: 0)
+//        let frame = firstChild.frame
+//        if firstChild.exists {
+//            let secondChild = app.collectionViews.children(matching:.any).element(boundBy: 1)
+//            firstChild.press(forDuration: 1, thenDragTo: secondChild)
+//            sleep(2)
+//            let frame2 = firstChild.frame
+//            XCTAssertTrue(frame == frame2)
+//
+//        }
+//
+//    }
     
 }

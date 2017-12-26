@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "PositionInfoManager.createZeroMatrix():PositionInfo.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "frame.width">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat((numberOfColumns-1))*CGFloat(padding)">
+            </PersistentString>
+            <PersistentString
+               value = "numberOfColumns">
+            </PersistentString>
+            <PersistentString
+               value = "Float(frame.width)/Float(numberOfColumns) - Float((numberOfColumns-1))*Float(padding)">
+            </PersistentString>
+            <PersistentString
+               value = "Float(frame.width)/Float(numberOfColumns)">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat(padding)">
+            </PersistentString>
+            <PersistentString
+               value = "frame.width/CGFloat(numberOfColumns)">
+            </PersistentString>
+            <PersistentString
+               value = "Float((numberOfColumns-1))*Float(padding)">
+            </PersistentString>
+            <PersistentString
+               value = "Float(Float(frame.width) - Float((numberOfColumns-1))*Float(padding))/Float(numberOfColumns)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PositionInfoManager.elementFillInSpace(matrix:element:):PositionInfo.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.getCellsSupport():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell7.view.frame">
+            </PersistentString>
+            <PersistentString
+               value = "cell7.view">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
