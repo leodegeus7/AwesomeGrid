@@ -43,6 +43,9 @@ CellSupport(gridView: GridLayout, row: Int, column: Int, squaresOfHeight: Int, s
 ```sh
 gridLayour.viewWillTransition(size: size)
 ```
+## Hints
+
+![](https://i.imgur.com/p1FJohV.png)
 
 
 ## Release History
