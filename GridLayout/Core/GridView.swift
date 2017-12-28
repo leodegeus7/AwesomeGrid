@@ -29,7 +29,7 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
     internal var movingCell:CellSupport!
     internal var snapShotView = UIView()
     
-    var PLOT_MATRIX = false
+    var DEBUG = false
     
     internal var tapGesture:UITapGestureRecognizer!
     
@@ -55,6 +55,45 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
         
     }
     
+    public var longPressToMove:Bool {
+        get {
+            if let _ = longPressGesture {
+                return true
+            } else {
+                return false
+            }
+        }
+        set(status) {
+            if status {
+                longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture(gesture:)))
+                self.addGestureRecognizer(longPressGesture)
+            } else {
+                if let _ = longPressGesture {
+                    self.removeGestureRecognizer(longPressGesture)
+                }
+            }
+        }
+        
+    }
+    
+    public func getNumberOfCols() -> Int {
+        if let _ = positionInfo {
+            return positionInfo.numberOfColumns
+        } else {
+            _ = Error.get(code: .e102)
+            return 0
+        }
+    }
+    
+    public func getNumberOfRows() -> Int {
+        if let _ = positionInfo {
+            return positionInfo.numberOfRows
+        } else {
+            _ = Error.get(code: .e101)
+            return 0
+        }
+    }
+    
     internal enum Orientation {
         case Horizontal
         case Vertical
@@ -62,6 +101,16 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func lprint(_ s:String) {
+        if DEBUG {
+            print(s)
+        }
+    }
+    
+    func lprint(_ e:ErrorType) {
+        _ = Error.get(code: e)
     }
 
     ///////////////////////////////////////////////////////////////
@@ -77,8 +126,6 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
     }
     
     public func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        print("Starting Index: \(sourceIndexPath.item)")
-        print("Ending Index: \(destinationIndexPath.item)")
     }
     
     public func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -> Bool {
@@ -96,9 +143,16 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
     // Data Manager //
     ///////////////////////////////////////////////////////////////
     
+    var cellBuffer:[CellSupport]!
+    
     internal func prepareCollection() {
         elements = gridDelegate.getCellsSupport()
-        _ = positionInfo.addElementsOfSupport(cellsSupport: elements)
+        elements = positionInfo.addElementsOfSupportAndReturnApprovedCellsSupports(cellsSupport: elements)
+    }
+    
+    public func reloadDataInGrid() {
+        prepareCollection()
+        self.reloadData()
     }
     
     internal func getPositionInfoManager(_ collectionView: UICollectionView) -> PositionInfoManager {
@@ -114,7 +168,7 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
     // Public Functions //
     ///////////////////////////////////////////////////////////////
     
-    public func inicialize(numberOfColumns:Int,optionalPadding padding:CGFloat=0) {
+    public func initialize(numberOfColumns:Int,debug:Bool,optionalPadding padding:CGFloat=0) {
         self.delegate = self
         self.dataSource = self
         longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture(gesture:)))
@@ -122,7 +176,11 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
         
         let bundle = Bundle(for: GridLayout.self)
         self.register(UINib(nibName: "ColorCell", bundle: bundle), forCellWithReuseIdentifier: "colorCell")
-        
+        if debug {
+            DEBUG = true
+        } else {
+            DEBUG = false
+        }
         
         if let layout = self.collectionViewLayout as? GridLayout {
             layout.delegate = self
@@ -136,6 +194,7 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
                 rect = updateFrameOfCollection(orientation: .Vertical)
             }
             positionInfo = PositionInfoManager(numberOfColumns: numberOfColumns, frame: rect, padding: padding)
+            positionInfo.DEBUG = debug
             positionInfo.updateFrame(frame:rect)
             prepareCollection()
             
@@ -148,7 +207,6 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
     
     public func viewWillTransition(size:CGSize) {
         DispatchQueue.main.async {
-            print(size)
             var rect = CGRect()
             if size.width > size.height {
                 rect = self.updateFrameOfCollection(orientation: .Horizontal)
@@ -220,6 +278,7 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
             }
         }
     }
+
     
     @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
         switch(gesture.state) {
@@ -257,16 +316,15 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
             }
             elements.remove(at: indexToRemove)
             if positionInfo.removeElement(element: movingCell.element) {
-                print("Retirado")
+                lprint("Removed item with sucess")
             } else {
-                print("NAAAO Retirado")
+                lprint(.e103)
             }
             
             
             self.reloadData()
-            if PLOT_MATRIX {
+            if DEBUG {
                 positionInfo.plotMatrix()
-                
             }
             break
         case .changed:
@@ -276,13 +334,6 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
                 center.y = position.y
                 center.x = position.x
                 snapShotView.center = center
-                
-                
-                if positionInfo.testMovementPosition(element: movingCell.element, point: position) {
-                    print("deu")
-                } else {
-                    
-                }
             }
             break
         case .ended:
@@ -306,9 +357,9 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
                 } else {
                     if positionInfo.addElement(element: movingCell.element) {
                         elements.append(movingCell)
-                        print("Deu pra adicionar")
+                        lprint("Item was moved with sucess")
                     } else {
-                        print("Não deu")
+                        lprint(.e104)
                     }
                 }
                 self.reloadData()

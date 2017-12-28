@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "PositionInfoManager.getElementWithNewCoordinates(oldElement:point:):PositionInfo.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "columnSize">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PositionInfoManager.testMovementPosition(element:point:):PositionInfo.swift">
+      </ContextState>
+      <ContextState
          contextName = "PositionInfoManager.createZeroMatrix():PositionInfo.swift">
          <PersistentStrings>
             <PersistentString
@@ -18,10 +29,10 @@
                value = "Float(frame.width)/Float(numberOfColumns) - Float((numberOfColumns-1))*Float(padding)">
             </PersistentString>
             <PersistentString
-               value = "Float(frame.width)/Float(numberOfColumns)">
+               value = "CGFloat(padding)">
             </PersistentString>
             <PersistentString
-               value = "CGFloat(padding)">
+               value = "Float(frame.width)/Float(numberOfColumns)">
             </PersistentString>
             <PersistentString
                value = "frame.width/CGFloat(numberOfColumns)">
@@ -31,6 +42,20 @@
             </PersistentString>
             <PersistentString
                value = "Float(Float(frame.width) - Float((numberOfColumns-1))*Float(padding))/Float(numberOfColumns)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PositionInfoManager.getCenterPositionOfFirstBlock(element:centerPoint:):PositionInfo.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Float(padding)*Float((numberOfColumns-1)*element.column)">
+            </PersistentString>
+            <PersistentString
+               value = "Float(centerPoint.x) - Float(columnSize)/2*Float(element.squaresOfWidth) + Float(columnSize/2)">
+            </PersistentString>
+            <PersistentString
+               value = "Float(padding)*Float((0-1))">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -45,6 +70,14 @@
             </PersistentString>
             <PersistentString
                value = "cell7.view">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GridView.handleLongGesture(gesture:):GridView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "movingCell.element">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -15,6 +15,7 @@ class PositionInfoManager: NSObject {
     var numberOfRows = 0
     var columnSize:CGFloat = 0.0
     var indexForCells = 0
+    var DEBUG = false
     
     
     public var properlySeatedElements = [Element]()
@@ -57,10 +58,13 @@ class PositionInfoManager: NSObject {
     
     internal func createZeroMatrix() -> [[TypeObject]] {
         var matrix = [[TypeObject]]()
-        let totalHeight = frame.height
-        
+        var totalHeight = frame.height
         columnSize = getColumnSize()
         numberOfRows = Int(totalHeight/columnSize)
+        if padding > 0 {
+            totalHeight = frame.height - padding * CGFloat(numberOfRows-1)
+            numberOfRows = Int(totalHeight/columnSize)
+        }
         let columns = numberOfColumns
         let rows = numberOfRows
         
@@ -110,51 +114,60 @@ class PositionInfoManager: NSObject {
     public func addElement(element:Element) -> Bool {
         if let newMatrix = addElementInMatrix(matrix: matrix, element: element) {
             self.matrix = newMatrix
-            print("Element add with success")
+            lprint("Element add with success")
             plotMatrix()
             properlySeatedElements.append(element)
             return true
         } else {
-            print("Not possible to add element")
+            lprint(.e105)
             return false
         }
     }
     
-    public func addElementsOfSupport(cellsSupport:[CellSupport]) -> Bool {
-        var elements = [Element]()
-        for support in cellsSupport {
-            elements.append(support.element)
-        }
-        for element in elements {
-            if let newMatrix = addElementInMatrix(matrix: matrix, element: element) {
+    public func addElementsOfSupportAndReturnApprovedCellsSupports(cellsSupport:[CellSupport]) -> [CellSupport] {
+        var approvedCellsSupports = [CellSupport]()
+        for cell in cellsSupport {
+            if let newMatrix = addElementInMatrix(matrix: matrix, element: cell.element) {
                 self.matrix = newMatrix
-                print("Element add with success")
+                lprint("Element add with success")
                 plotMatrix()
-                properlySeatedElements.append(element)
-                
+                properlySeatedElements.append(cell.element)
+                approvedCellsSupports.append(cell)
             } else {
-                print("Not possible to add element \(element)")
-                
+                lprint(.e106)
+                lprint("\(cell.element!)")
             }
         }
-        return true
+        return approvedCellsSupports
     }
     
     public func addElements(elements:[Element]) -> Bool {
         for element in elements {
             if let newMatrix = addElementInMatrix(matrix: matrix, element: element) {
                 self.matrix = newMatrix
-                print("Element add with success")
+                lprint("Element add with success")
                 plotMatrix()
                 properlySeatedElements.append(element)
                 
             } else {
-                print("Not possible to add element \(element)")
-                
+                lprint(.e107)
+                lprint("\(element)")
             }
         }
         return true
     }
+    
+    
+    func getNumberOfPaddingsInPosition(yPoint:CGFloat) -> Int {
+        var height:CGFloat = 0
+        var paddings = 0
+        while height < yPoint {
+            height = height + columnSize + padding
+            paddings = paddings + 1
+        }
+        return Int(paddings-1)
+    }
+    
     
     internal func getElementWithNewCoordinates(oldElement:Element,point:CGPoint) -> Element {
         var column = -1
@@ -162,8 +175,11 @@ class PositionInfoManager: NSObject {
         var squaresOfHeight = -1
         var squaresOfWidth = -1
         
-        row = Int(point.y/columnSize)
-        column = Int(point.x/columnSize)
+        let newYY = point.y - CGFloat(getNumberOfPaddingsInPosition(yPoint: point.y))*padding
+        let newXX = point.x - CGFloat(getNumberOfPaddingsInPosition(yPoint: point.x))*padding
+        
+        row = Int(newYY/columnSize)
+        column = Int(newXX/columnSize)
         squaresOfHeight = oldElement.squaresOfHeight
         squaresOfWidth = oldElement.squaresOfWidth
         return Element(row: row, column: column, squaresOfWidth: squaresOfWidth, squaresOfHeight: squaresOfHeight)
@@ -198,7 +214,7 @@ class PositionInfoManager: NSObject {
             if addElement(element: newElement) {
                 return newElement
             } else {
-                print("Not added element in array")
+                lprint(.e107)
                 return nil
             }
             
@@ -253,7 +269,7 @@ class PositionInfoManager: NSObject {
             properlySeatedElements.remove(at: indexToRemove)
             return true
         } else {
-            print("Element to remove not founded")
+            lprint(.e109)
             return false
         }
     }
@@ -316,7 +332,7 @@ class PositionInfoManager: NSObject {
                 if addElement(element: newElement) {
                     return newElement
                 } else {
-                    print("Not possible to add element in resizing")
+                    lprint(.e110)
                     let _ = addElement(element: element)
                     return nil
                 }
@@ -325,7 +341,7 @@ class PositionInfoManager: NSObject {
                 return nil
             }
         } else {
-            print("Not possible to delete element in resizing")
+            lprint(.e111)
             return nil
         }
     }
@@ -354,16 +370,25 @@ class PositionInfoManager: NSObject {
     }
     
     public func plotMatrix() {
-        print("")
+        lprint("")
         for col in self.matrix {
             var colString = ""
             for element in col {
                 colString += "\(element.rawValue)"
                 colString += " "
             }
-            print(colString)
+            lprint(colString)
         }
-        
+    }
+    
+    func lprint(_ s:String) {
+        if DEBUG {
+            print(s)
+        }
+    }
+    
+    func lprint(_ e:ErrorType) {
+        _ = Error.get(code: e)
     }
 }
 

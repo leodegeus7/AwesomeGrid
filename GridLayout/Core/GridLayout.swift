@@ -58,7 +58,7 @@ class GridLayout: UICollectionViewLayout {
             attributes.frame = frame
             cache.append(attributes)
         }
-        contentHeight = frameSize.height
+        contentHeight = frameSize.height 
     }
     
     override public func invalidateLayout() {

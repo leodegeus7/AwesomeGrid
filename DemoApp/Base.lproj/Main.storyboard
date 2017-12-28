@@ -11,7 +11,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="AmericanTypewriter.ttc">
-            <string>AmericanTypewriter-Semibold</string>
+            <string>AmericanTypewriter-CondensedBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kbj-Nv-U0E" customClass="GridView" customModule="GridLayout">
-                                <rect key="frame" x="10" y="93.5" width="355" height="563.5"/>
+                                <rect key="frame" x="50" y="117.5" width="275" height="509.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="i8o-KL-Z91" customClass="GridLayout" customModule="GridLayout"/>
                                 <cells>
@@ -38,22 +38,21 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome Grid Layout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvg-Oo-qFV">
-                                <rect key="frame" x="-0.5" y="43" width="375" height="33.5"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="29"/>
-                                <color key="textColor" red="0.28858411490164976" green="0.29442433252785022" blue="0.31659375000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome Grid Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncz-Z3-8cn">
+                                <rect key="frame" x="38.5" y="50" width="299" height="42"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedBold" family="American Typewriter" pointSize="35"/>
+                                <color key="textColor" red="0.82745098039215681" green="0.83137254901960778" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bvg-Oo-qFV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Pz-bO-3Cr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kbj-Nv-U0E" secondAttribute="bottom" constant="10" id="LrA-dh-7lJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kbj-Nv-U0E" secondAttribute="trailing" constant="10" id="MLD-b7-mM3"/>
-                            <constraint firstItem="kbj-Nv-U0E" firstAttribute="top" secondItem="bvg-Oo-qFV" secondAttribute="bottom" constant="17" id="U0d-mZ-xcU"/>
-                            <constraint firstItem="bvg-Oo-qFV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="aW0-hB-WpL"/>
-                            <constraint firstItem="bvg-Oo-qFV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="dGP-iu-ivc"/>
-                            <constraint firstItem="kbj-Nv-U0E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="le9-Rm-5Op"/>
+                            <constraint firstItem="kbj-Nv-U0E" firstAttribute="top" secondItem="Ncz-Z3-8cn" secondAttribute="bottom" constant="25" id="00o-Nh-r5d"/>
+                            <constraint firstItem="Ncz-Z3-8cn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IUL-KD-ceY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kbj-Nv-U0E" secondAttribute="bottom" constant="40" id="LrA-dh-7lJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kbj-Nv-U0E" secondAttribute="trailing" constant="50" id="MLD-b7-mM3"/>
+                            <constraint firstItem="Ncz-Z3-8cn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="XHv-fz-CQm"/>
+                            <constraint firstItem="kbj-Nv-U0E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="le9-Rm-5Op"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

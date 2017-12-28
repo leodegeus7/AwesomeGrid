@@ -25,6 +25,8 @@
 		CD4DB5D71FF2A71400E06E02 /* GridLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD4DB5801FF2A40F00E06E02 /* GridLayout.framework */; };
 		CD4DB5D81FF2A71400E06E02 /* GridLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD4DB5801FF2A40F00E06E02 /* GridLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD4DB5DF1FF2B11E00E06E02 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CD4DB5DE1FF2B11E00E06E02 /* LICENSE */; };
+		CD4DB5E11FF3ED6200E06E02 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4DB5E01FF3ED6200E06E02 /* Error.swift */; };
+		CDEA8F061FF3FC4100FA3BF5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA8F051FF3FC4100FA3BF5 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		CD4DB5CB1FF2A62500E06E02 /* DemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITests.swift; sourceTree = "<group>"; };
 		CD4DB5CD1FF2A62500E06E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4DB5DE1FF2B11E00E06E02 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CD4DB5E01FF3ED6200E06E02 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		CDEA8F051FF3FC4100FA3BF5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,11 +192,12 @@
 		CD4DB59A1FF2A49400E06E02 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CD4DB59E1FF2A49C00E06E02 /* CellSupport.swift */,
 				CD4DB59B1FF2A49C00E06E02 /* ColorCell.xib */,
+				CD4DB59E1FF2A49C00E06E02 /* CellSupport.swift */,
 				CD4DB59D1FF2A49C00E06E02 /* GridLayout.swift */,
 				CD4DB59C1FF2A49C00E06E02 /* GridView.swift */,
 				CD4DB59F1FF2A49D00E06E02 /* PositionInfo.swift */,
+				CD4DB5E01FF3ED6200E06E02 /* Error.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				CD4DB5B21FF2A62500E06E02 /* Assets.xcassets */,
 				CD4DB5B41FF2A62500E06E02 /* LaunchScreen.storyboard */,
 				CD4DB5B71FF2A62500E06E02 /* Info.plist */,
+				CDEA8F051FF3FC4100FA3BF5 /* Colors.swift */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 				CD4DB5A11FF2A49D00E06E02 /* GridView.swift in Sources */,
 				CD4DB5A21FF2A49D00E06E02 /* GridLayout.swift in Sources */,
 				CD4DB5A41FF2A49D00E06E02 /* PositionInfo.swift in Sources */,
+				CD4DB5E11FF3ED6200E06E02 /* Error.swift in Sources */,
 				CD4DB5A31FF2A49D00E06E02 /* CellSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD4DB5AE1FF2A62500E06E02 /* ViewController.swift in Sources */,
+				CDEA8F061FF3FC4100FA3BF5 /* Colors.swift in Sources */,
 				CD4DB5AC1FF2A62500E06E02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
