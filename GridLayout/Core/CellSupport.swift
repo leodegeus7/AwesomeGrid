@@ -12,7 +12,7 @@ public class CellSupport: NSObject {
 
     public var element:Element!
     public var view:UIView!
-    var index:Int!
+    public var index:Int!
     
     public init(gridView:GridView,row:Int,column:Int,squaresOfHeight:Int,squaresOfWidth:Int) {
         super.init()
