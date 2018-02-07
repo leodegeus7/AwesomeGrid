@@ -25,8 +25,7 @@ class ViewController: UIViewController,GridLayoutDelegate {
         collectionView.tapToResize = false
     }
     
-    
-    func getCellsSupport() -> [CellSupport] {
+    func getCellsSupport(gridView: GridView) -> [CellSupport] {
         var cells = [CellSupport]()
         let cell1 = CellSupport(gridView: collectionView, row: 0, column: 0, squaresOfHeight: 1, squaresOfWidth: 4)
         cells.append(cell1)
@@ -37,7 +36,7 @@ class ViewController: UIViewController,GridLayoutDelegate {
         cells.append(cell2)
         cell2.view.backgroundColor = UIColor.blue
         
-
+        
         let cell3 = CellSupport(gridView: collectionView, row: 1, column: 2, squaresOfHeight: 2, squaresOfWidth: 2)
         cells.append(cell3)
         cell3.view.backgroundColor = UIColor.green

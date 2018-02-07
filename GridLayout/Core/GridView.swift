@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol GridLayoutDelegate: class {
-    func getCellsSupport() -> [CellSupport]
+    func getCellsSupport(gridView:GridView) -> [CellSupport]
 }
 
 public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
@@ -146,7 +146,7 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
     var cellBuffer:[CellSupport]!
     
     internal func prepareCollection() {
-        elements = gridDelegate.getCellsSupport()
+        elements = gridDelegate.getCellsSupport(gridView: self)
         elements = positionInfo.addElementsOfSupportAndReturnApprovedCellsSupports(cellsSupport: elements)
     }
     
