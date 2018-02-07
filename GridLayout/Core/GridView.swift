@@ -279,6 +279,11 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
         }
     }
 
+    public func getCellIn(position:CGPoint) -> CellSupport {
+        let indexPath = self.indexPathForItem(at: position)
+        let cell = elements[(indexPath?.row)!]
+        return cell
+    }
     
     @objc func handleLongGesture(gesture: UILongPressGestureRecognizer) {
         switch(gesture.state) {
