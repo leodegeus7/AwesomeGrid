@@ -376,6 +376,14 @@ class PositionInfoManager: NSObject {
         if newMatrix.count-1 < (row+(height-1)) {
             return false
         }
+        
+        if row < 0 {
+            return true
+        }
+        if column < 0 {
+            return true
+        }
+        
 
         for y in row...(row+(height-1)) {
             for x in column...(column+(width-1)) {

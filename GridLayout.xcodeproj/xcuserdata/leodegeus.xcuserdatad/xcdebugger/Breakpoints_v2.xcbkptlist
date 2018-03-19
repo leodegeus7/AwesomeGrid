@@ -177,68 +177,6 @@
             endingLineNumber = "59"
             landmarkName = "collectionView(_:performDropWith:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DemoApp.DragAndDropViewController.gridView1.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;GridLayout.GridView&gt;"
-                  moduleName = "DemoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leodegeus/awesomeGrid/DemoApp/DragAndDropViewController.swift"
-                  timestampString = "539810906.455002"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "79">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DemoApp.DragAndDropViewController.gridView1.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;GridLayout.GridView&gt;"
-                  moduleName = "DemoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leodegeus/awesomeGrid/DemoApp/DragAndDropViewController.swift"
-                  timestampString = "539810906.457692"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "86">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DemoApp.DragAndDropViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; DemoApp.DragAndDropViewController"
-                  moduleName = "DemoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leodegeus/awesomeGrid/DemoApp/DragAndDropViewController.swift"
-                  timestampString = "539810906.4601049"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "77">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DemoApp.DragAndDropViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;DemoApp.DragAndDropViewController&gt;"
-                  moduleName = "DemoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leodegeus/awesomeGrid/DemoApp/DragAndDropViewController.swift"
-                  timestampString = "539810906.4625469"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "46">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -255,68 +193,6 @@
             endingLineNumber = "62"
             landmarkName = "collectionView(_:performDropWith:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DemoApp.DragAndDropViewController.gridView1.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;GridLayout.GridView&gt;"
-                  moduleName = "DemoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leodegeus/awesomeGrid/DemoApp/DragAndDropViewController.swift"
-                  timestampString = "539810906.472388"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "79">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DemoApp.DragAndDropViewController.gridView1.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;GridLayout.GridView&gt;"
-                  moduleName = "DemoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leodegeus/awesomeGrid/DemoApp/DragAndDropViewController.swift"
-                  timestampString = "539810906.474926"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "86">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DemoApp.DragAndDropViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; DemoApp.DragAndDropViewController"
-                  moduleName = "DemoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leodegeus/awesomeGrid/DemoApp/DragAndDropViewController.swift"
-                  timestampString = "539810906.477718"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "77">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DemoApp.DragAndDropViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;DemoApp.DragAndDropViewController&gt;"
-                  moduleName = "DemoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leodegeus/awesomeGrid/DemoApp/DragAndDropViewController.swift"
-                  timestampString = "539810906.480371"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "46">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -358,7 +234,7 @@
                   moduleName = "GridLayout"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/leodegeus/awesomeGrid/GridLayout/Core/GridView.swift"
-                  timestampString = "539810906.489656"
+                  timestampString = "543182983.729546"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "298"
@@ -373,7 +249,7 @@
                   moduleName = "GridLayout"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/leodegeus/awesomeGrid/GridLayout/Core/GridView.swift"
-                  timestampString = "539810906.492316"
+                  timestampString = "543182983.732821"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "298"

@@ -103,7 +103,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome Grid Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncz-Z3-8cn">
-                                <rect key="frame" x="38.5" y="50" width="299" height="42"/>
+                                <rect key="frame" x="38" y="50" width="299" height="42"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedBold" family="American Typewriter" pointSize="35"/>
                                 <color key="textColor" red="0.82745098039215681" green="0.83137254901960778" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -126,6 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="118" y="96"/>
         </scene>
         <!--Drag And Drop View Controller-->
         <scene sceneID="sFH-2T-ltU">
