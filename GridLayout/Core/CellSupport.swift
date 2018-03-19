@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 public class CellSupport: NSObject {
+    
+
+    
 
     public var element:Element!
     public var view:UIView!
@@ -30,3 +34,5 @@ public class CellSupport: NSObject {
         self.index = cellSupport.index
     }
 }
+
+

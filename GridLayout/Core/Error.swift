@@ -20,6 +20,7 @@ enum ErrorType:String {
     case e109 = "Element to remove not founded"
     case e110 = "Not possible to add element when resizing"
     case e111 = "Not possible to add element when resizing."
+    case e112 = "Not possible to add element in update of CellSupport"
 }
 
 class Error:NSObject {

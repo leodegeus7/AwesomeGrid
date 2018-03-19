@@ -3,10 +3,46 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "PositionInfoManager.getElementWithNewCoordinates(oldElement:point:):PositionInfo.swift">
+         contextName = "PositionInfoManager.lprint(_:):PositionInfo.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GridView.handleLongGesture(gesture:):GridView.swift">
          <PersistentStrings>
             <PersistentString
-               value = "columnSize">
+               value = "movingCell.element">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GridLayout.layoutAttributesForItem(at:):GridLayout.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cache">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.item">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DragAndDropViewController.collectionView(_:itemsForBeginning:at:):DragAndDropViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "session.location(in: frame)">
+            </PersistentString>
+            <PersistentString
+               value = "session.location(in: UIView(frame: UIScreen.main.bounds))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.getCellsSupport():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell7.view.frame">
+            </PersistentString>
+            <PersistentString
+               value = "cell7.view">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -14,34 +50,40 @@
          contextName = "PositionInfoManager.testMovementPosition(element:point:):PositionInfo.swift">
       </ContextState>
       <ContextState
-         contextName = "PositionInfoManager.createZeroMatrix():PositionInfo.swift">
+         contextName = "DragAndDropViewController.dragItem(forPhotoAt:):DragAndDropViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "frame.width">
+               value = "&quot;\(item.index!)&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in DragAndDropViewController.collectionView(_:performDropWith:):DragAndDropViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "value!">
             </PersistentString>
             <PersistentString
-               value = "CGFloat((numberOfColumns-1))*CGFloat(padding)">
+               value = "&quot;\(DataSingleton.shared.dragItem.index!)&quot;">
             </PersistentString>
             <PersistentString
-               value = "numberOfColumns">
+               value = "DataSingleton.shared.dragItem.index">
             </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DragAndDropViewController.viewDidAppear(_:):DragAndDropViewController.swift">
+         <PersistentStrings>
             <PersistentString
-               value = "Float(frame.width)/Float(numberOfColumns) - Float((numberOfColumns-1))*Float(padding)">
+               value = "gridView2.elements">
             </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GridView.getCellIn(position:):GridView.swift">
+         <PersistentStrings>
             <PersistentString
-               value = "CGFloat(padding)">
-            </PersistentString>
-            <PersistentString
-               value = "Float(frame.width)/Float(numberOfColumns)">
-            </PersistentString>
-            <PersistentString
-               value = "frame.width/CGFloat(numberOfColumns)">
-            </PersistentString>
-            <PersistentString
-               value = "Float((numberOfColumns-1))*Float(padding)">
-            </PersistentString>
-            <PersistentString
-               value = "Float(Float(frame.width) - Float((numberOfColumns-1))*Float(padding))/Float(numberOfColumns)">
+               value = "(indexPath?.row)!">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -60,24 +102,75 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PositionInfoManager.elementFillInSpace(matrix:element:):PositionInfo.swift">
-      </ContextState>
-      <ContextState
-         contextName = "ViewController.getCellsSupport():ViewController.swift">
+         contextName = "PositionInfoManager.updatePositionOfCellSupport(oldCellSupport:position:):PositionInfo.swift">
          <PersistentStrings>
             <PersistentString
-               value = "cell7.view.frame">
-            </PersistentString>
-            <PersistentString
-               value = "cell7.view">
+               value = "properlySeatedElements">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "GridView.handleLongGesture(gesture:):GridView.swift">
+         contextName = "DragAndDropViewController.collectionView(_:performDropWith:):DragAndDropViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "movingCell.element">
+               value = "gridView2.elements">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PositionInfoManager.elementFillInSpace(matrix:element:):PositionInfo.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GridView.addOldCellSupportWithNewPosition(cellSupport:position:):GridView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.positionInfo.properlySeatedElements">
+            </PersistentString>
+            <PersistentString
+               value = "gridView2.elements">
+            </PersistentString>
+            <PersistentString
+               value = "elements">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PositionInfoManager.getElementWithNewCoordinates(oldElement:point:):PositionInfo.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "columnSize">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PositionInfoManager.createZeroMatrix():PositionInfo.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "frame.width">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat((numberOfColumns-1))*CGFloat(padding)">
+            </PersistentString>
+            <PersistentString
+               value = "numberOfColumns">
+            </PersistentString>
+            <PersistentString
+               value = "Float(frame.width)/Float(numberOfColumns) - Float((numberOfColumns-1))*Float(padding)">
+            </PersistentString>
+            <PersistentString
+               value = "Float(frame.width)/Float(numberOfColumns)">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat(padding)">
+            </PersistentString>
+            <PersistentString
+               value = "frame.width/CGFloat(numberOfColumns)">
+            </PersistentString>
+            <PersistentString
+               value = "Float((numberOfColumns-1))*Float(padding)">
+            </PersistentString>
+            <PersistentString
+               value = "Float(Float(frame.width) - Float((numberOfColumns-1))*Float(padding))/Float(numberOfColumns)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

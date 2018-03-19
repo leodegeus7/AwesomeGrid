@@ -141,6 +141,26 @@ class PositionInfoManager: NSObject {
         return approvedCellsSupports
     }
     
+    public func updatePositionOfCellSupport(oldCellSupport:CellSupport,position:CGPoint) -> CellSupport? {
+        let height = oldCellSupport.element.squaresOfHeight
+        let width = oldCellSupport.element.squaresOfWidth
+        let elementFake = Element(row: 0, column: 0, squaresOfWidth: width, squaresOfHeight: height)
+        
+        if testMovementPosition(element: elementFake, point: position) {
+            if let newElement = movePosition(element: elementFake, point: position) {
+                let newCellSupport = CellSupport(cellSupport: oldCellSupport, element: newElement)
+                plotMatrix()
+                return newCellSupport
+            } else {
+                lprint(.e107)
+                lprint("\(elementFake)")
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }
+    
     public func addElements(elements:[Element]) -> Bool {
         for element in elements {
             if let newMatrix = addElementInMatrix(matrix: matrix, element: element) {
@@ -219,6 +239,7 @@ class PositionInfoManager: NSObject {
             }
             
         } else {
+            
             return nil
         }
     }

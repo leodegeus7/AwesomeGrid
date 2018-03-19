@@ -150,6 +150,18 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
         elements = positionInfo.addElementsOfSupportAndReturnApprovedCellsSupports(cellsSupport: elements)
     }
     
+
+
+    public func addOldCellSupportWithNewPosition(cellSupport:CellSupport,position:CGPoint) {
+        
+        if let newCellSupport = self.positionInfo.updatePositionOfCellSupport(oldCellSupport: cellSupport, position: position) {
+            elements.append(newCellSupport)
+        }
+        
+            self.reloadData()
+        
+    }
+    
     public func reloadDataInGrid() {
         prepareCollection()
         self.reloadData()
@@ -243,6 +255,8 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
         cellSnapshot.layer.shadowOpacity = 0.4
         return cellSnapshot
     }
+    
+    
     
     ///////////////////////////////////////////////////////////////
     // Gesture Manager //

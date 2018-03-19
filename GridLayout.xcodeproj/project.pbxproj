@@ -26,6 +26,8 @@
 		CD4DB5D81FF2A71400E06E02 /* GridLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD4DB5801FF2A40F00E06E02 /* GridLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD4DB5DF1FF2B11E00E06E02 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CD4DB5DE1FF2B11E00E06E02 /* LICENSE */; };
 		CD4DB5E11FF3ED6200E06E02 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4DB5E01FF3ED6200E06E02 /* Error.swift */; };
+		CD7463B6202B87CA0095CBC4 /* DragAndDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7463B5202B87CA0095CBC4 /* DragAndDropViewController.swift */; };
+		CD746442202C90BC0095CBC4 /* DataSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD746441202C90BC0095CBC4 /* DataSingleton.swift */; };
 		CDEA8F061FF3FC4100FA3BF5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA8F051FF3FC4100FA3BF5 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,8 @@
 		CD4DB5CD1FF2A62500E06E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4DB5DE1FF2B11E00E06E02 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CD4DB5E01FF3ED6200E06E02 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		CD7463B5202B87CA0095CBC4 /* DragAndDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropViewController.swift; sourceTree = "<group>"; };
+		CD746441202C90BC0095CBC4 /* DataSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSingleton.swift; sourceTree = "<group>"; };
 		CDEA8F051FF3FC4100FA3BF5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +216,8 @@
 				CD4DB5B41FF2A62500E06E02 /* LaunchScreen.storyboard */,
 				CD4DB5B71FF2A62500E06E02 /* Info.plist */,
 				CDEA8F051FF3FC4100FA3BF5 /* Colors.swift */,
+				CD7463B5202B87CA0095CBC4 /* DragAndDropViewController.swift */,
+				CD746441202C90BC0095CBC4 /* DataSingleton.swift */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
@@ -467,6 +473,8 @@
 				CD4DB5AE1FF2A62500E06E02 /* ViewController.swift in Sources */,
 				CDEA8F061FF3FC4100FA3BF5 /* Colors.swift in Sources */,
 				CD4DB5AC1FF2A62500E06E02 /* AppDelegate.swift in Sources */,
+				CD7463B6202B87CA0095CBC4 /* DragAndDropViewController.swift in Sources */,
+				CD746442202C90BC0095CBC4 /* DataSingleton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
