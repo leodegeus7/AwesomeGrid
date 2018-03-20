@@ -27,21 +27,21 @@ To use this tool you need to follow few steps:
 3) Override the func viewDidLayoutSubviews of your View Controller and insert the follow code inside:
 
 ```sh
-collectionView.gridDelegate = self
-collectionView.initialize(numberOfColumns: Int, debug: Bool ,optionalPadding: Int)
+gridView.gridDelegate = self
+gridView.initialize(numberOfColumns: Int, debug: Bool ,optionalPadding: Int)
 ```
 4) Get de function getCellsSupport of delegate in your Controller, and create a array of CellSupports.
 CellSupport is the way that you set the content of cell and the position of cell in grid. You can construct a CellSupport passing your grid Layout and the coordinates of item:
 
 ```sh
-CellSupport(gridView: GridLayout, row: Int, column: Int, squaresOfHeight: Int, squaresOfWidth: Int)
+CellSupport(gridView: GridView, row: Int, column: Int, squaresOfHeight: Int, squaresOfWidth: Int)
 ```
 
 5) Customize the view of your new Cell Support adding subViews in cellSupport.view
 6) Override func viewWillTransition of your Controller and set
 
 ```sh
-gridLayour.viewWillTransition(size: size)
+gridView.viewWillTransition(size: size)
 ```
 ## Hints
 
