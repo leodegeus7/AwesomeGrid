@@ -163,6 +163,8 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
     }
     
     public func reloadDataInGrid() {
+        positionInfo.properlySeatedElements = []
+        positionInfo.cleanMatrix()
         prepareCollection()
         self.reloadData()
     }
