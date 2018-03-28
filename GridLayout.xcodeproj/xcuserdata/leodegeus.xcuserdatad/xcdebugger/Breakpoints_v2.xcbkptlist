@@ -6,38 +6,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GridLayout/Core/GridView.swift"
-            timestampString = "539810905.147415"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "addOldCellSupportWithNewPosition(cellSupport:position:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GridLayout/Core/GridView.swift"
-            timestampString = "539810905.148101"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "addOldCellSupportWithNewPosition(cellSupport:position:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -218,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GridLayout/Core/GridView.swift"
-            timestampString = "539810905.149361"
+            timestampString = "543192770.45662"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
             landmarkName = "getCellIn(position:)"
             landmarkType = "7">
             <Locations>
@@ -234,11 +202,11 @@
                   moduleName = "GridLayout"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/leodegeus/awesomeGrid/GridLayout/Core/GridView.swift"
-                  timestampString = "543182983.729546"
+                  timestampString = "543192770.675879"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "298"
-                  endingLineNumber = "298"
+                  startingLineNumber = "300"
+                  endingLineNumber = "300"
                   offsetFromSymbolStart = "278">
                </Location>
                <Location
@@ -249,11 +217,11 @@
                   moduleName = "GridLayout"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/leodegeus/awesomeGrid/GridLayout/Core/GridView.swift"
-                  timestampString = "543182983.732821"
+                  timestampString = "543192770.680317"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "298"
-                  endingLineNumber = "298"
+                  startingLineNumber = "300"
+                  endingLineNumber = "300"
                   offsetFromSymbolStart = "600">
                </Location>
             </Locations>

@@ -134,7 +134,16 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "colorCell", for: indexPath) as? ColorCollectionViewCell
-        cell?.addSubview(elements[indexPath.row].view)
+        for subView in (cell?.subviews)! {
+            if subView.tag == 1 {
+                subView.removeFromSuperview()
+            }
+        }
+        
+        let view = elements[indexPath.row].view
+        view?.tag = 1
+        cell?.addSubview(view!)
+
         cell?.backgroundColor = elements[indexPath.row].view.backgroundColor
         return cell!
     }
@@ -149,7 +158,6 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
         elements = gridDelegate.getCellsSupport(gridView: self)
         elements = positionInfo.addElementsOfSupportAndReturnApprovedCellsSupports(cellsSupport: elements)
     }
-    
 
 
     public func addOldCellSupportWithNewPosition(cellSupport:CellSupport,position:CGPoint) {
@@ -157,8 +165,7 @@ public class GridView: UICollectionView,GridInternalLayoutDelegate,UICollectionV
         if let newCellSupport = self.positionInfo.updatePositionOfCellSupport(oldCellSupport: cellSupport, position: position) {
             elements.append(newCellSupport)
         }
-        
-            self.reloadData()
+        self.reloadData()
         
     }
     

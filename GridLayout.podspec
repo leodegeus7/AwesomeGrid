@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "GridLayout"
-s.version      = "0.0.25"
+s.version      = "0.0.26"
 s.summary      = "This is a generic gridlayout"
 
 # This description is used to generate tags and improve search results.

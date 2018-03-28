@@ -29,6 +29,10 @@ class PositionInfoManager: NSObject {
         case X = 1
         case E = -1
     }
+    
+    public func cleanMatrix() {
+        self.matrix = createZeroMatrix()
+    }
 
     public func getIndexForCreateCell() -> Int {
         indexForCells = indexForCells + 1
@@ -294,10 +298,7 @@ class PositionInfoManager: NSObject {
             return false
         }
     }
-    
-    public func cleanMatrix() {
-        self.matrix = createZeroMatrix()
-    }
+
     
     internal func addElementInMatrix(matrix:[[TypeObject]],element:Element) -> [[TypeObject]]? {
         if elementFillInSpace(matrix: matrix, element: element) {
